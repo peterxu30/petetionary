@@ -45,14 +45,14 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 
 <script>
-words = ["One Piece", "jigsaw puzzle", "doge", "agile", "Jira", "bending", "Appa", "Aang", "Katara", "Zuko", "Sokka", "my cabbages", "San Francisco", "tech bro", "disrupt", "startup", "gentrification", "burrito", "boba", "Missouri", "St. Louis", "California", "wall", "Chyna", "foodie", "influencer", "Uber", "Square", "Salesforce Tower", "Transamerica Tower", "Coit Tower", "Sutro Tower", "hipster", "Donald Trump", "BART", "Napa", "Carole Baskin", "Joe Exotic", "the Zucc", "Patagucci", "shelter-in-place", "Zoom", "Naruto", "toilet paper", "hand sanitizer"]
-usedWords = []
+var words = ["One Piece", "jigsaw puzzle", "doge", "agile", "Jira", "bending", "Appa", "Aang", "Katara", "Zuko", "Sokka", "my cabbages", "San Francisco", "tech bro", "disrupt", "startup", "gentrification", "burrito", "boba", "Missouri", "St. Louis", "California", "wall", "Chyna", "foodie", "influencer", "Uber", "Square", "Salesforce Tower", "Transamerica Tower", "Coit Tower", "Sutro Tower", "hipster", "Donald Trump", "BART", "Napa", "Carole Baskin", "Joe Exotic", "the Zucc", "Patagucci", "shelter-in-place", "Zoom", "Naruto", "toilet paper", "hand sanitizer"];
+var usedWords = [];
 function newWord() {
-    usedWords.push(docmuent.getElementById("word").textContext)
+    usedWords.push(docmuent.getElementById("word").textContext);
     document.getElementById("usedwords") = usedWords.replace(",", "<br />");
-    newIndex = Math.floor(Math.random()*words.length)
-    newWord = words[newIndex];
-    words.splice(newIndex, 1)
+    var newIndex = Math.floor(Math.random()*words.length);
+    var newWord = words[newIndex];
+    words.splice(newIndex, 1);
     document.getElementById("word").innerHTML = newWord;
 }
 </script>
