@@ -49,7 +49,7 @@ var words = ["One Piece", "jigsaw puzzle", "doge", "agile", "Jira", "bending", "
 var usedWords = [];
 function newWord() {
     usedWords.push(document.getElementById("word").innerHTML);
-    document.getElementById("usedwords").innerHTML = usedWords.join("<br>");
+    document.getElementById("usedwords").innerHTML = usedWords.join("<br />");
     var newIndex = Math.floor(Math.random()*words.length);
     var newWord = words[newIndex];
     words.splice(newIndex, 1);
