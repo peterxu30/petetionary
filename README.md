@@ -36,11 +36,23 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
-<div id="text">Hello</div>
-<button onclick="myFunction()">Click me</button>
+<div> Your Word: </div>
+<div id="word"></div>
+<button onclick="newWord()">New Word</button>
+
+<div> Used Words </div>
+<div id="usedwords"></div>
+
 
 <script>
-function myFunction() {
-    document.getElementById("text").innerHTML = "World";
+words = ["One Piece", "jigsaw puzzle", "doge", "agile", "Jira", "bending", "Appa", "Aang", "Katara", "Zuko", "Sokka", "my cabbages", "San Francisco", "tech bro", "disrupt", "startup", "gentrification", "burrito", "boba", "Missouri", "St. Louis", "California", "wall", "Chyna", "foodie", "influencer", "Uber", "Square", "Salesforce Tower", "Transamerica Tower", "Coit Tower", "Sutro Tower", "hipster", "Donald Trump", "BART", "Napa", "Carole Baskin", "Joe Exotic", "the Zucc", "Patagucci", "shelter-in-place", "Zoom", "Naruto", "toilet paper", "hand sanitizer"]
+usedWords = []
+function newWord() {
+    usedWords.push(docmuent.getElementById("word").textContext)
+    document.getElementById("usedwords") = usedWords.replace(",", "<br />");
+    newIndex = Math.floor(Math.random()*words.length)
+    newWord = words[newIndex];
+    words.splice(newIndex, 1)
+    document.getElementById("word").innerHTML = newWord;
 }
 </script>
