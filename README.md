@@ -20,11 +20,13 @@ var usedWords = [];
 var i = 0;
 var done = false;
 function newWord() {
+    if (i > msg.length) {
+        return
+    }
+
     var previousWord = document.getElementById("word").innerHTML;
     if (previousWord !== "") {
-        if (i > msg.length) {
-            return
-        }
+
         usedWords.push(previousWord);
         document.getElementById("usedwords").innerHTML = usedWords.join("<br />");
     }
