@@ -27,7 +27,6 @@ var msg = ["VGltZQ==", "ZmxpZXM=", "d2hlbg==", "SQ==", "c3BlbmQ=", "aXQ=", "d2l0
 var usedWords = [];
 var i = 0;
 function newWord() {
-    setTimer()
     if (i == msg.length) {
         storePreviousWord();
         i++;
@@ -35,8 +34,10 @@ function newWord() {
 
     if (i < msg.length) {
         storePreviousWord();
-        if (!setNewWord()) {
-            setMsg()
+        if (setNewWord()) {
+            setTimer();
+        } else {
+            setMsg();
         }
     }
 }
