@@ -1,5 +1,7 @@
 ## Welcome to Petetionary
-Hit New Word below to generate a new word to draw! Don't refresh the page because while I'm crazy, I'm not crazy enough to add cookies.
+Welcome to Petetionary: Pictionary tailored by Pete. Hit **New Word** below to generate a new word to draw! You've one minute to craft your materpiece. Make sure your audio's on, an alarm will sound when time's up. I ain't a baker so there are no cookies. Don't refresh the page or you'll lose *everything*.
+
+Pete's Protip: You can also play charades.
 
 <h2 id="timer">Time: 0:0 </h2>
 
@@ -73,7 +75,7 @@ function setTimer() {
         loadAudio();
     }
     
-    var duration = 90000; // 1.5  minute timer
+    var duration = 60000; // 1.5  minute timer
     // Update the count down every 1 second
     x = setInterval(function() {
         // // Get today's date and time
