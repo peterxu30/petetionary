@@ -1,5 +1,5 @@
 ## Welcome to Petetionary
-Welcome to Petetionary: Pictionary tailored by Pete. Hit **New Word** below to generate a new word to draw! You've one minute to craft your materpiece. Make sure your audio's on, an alarm will sound when time's up. I ain't a baker so there are no cookies. Don't refresh the page or you'll lose *everything*.
+Welcome to Petetionary: Pictionary with my special touch. Hit **New Word** below to generate a new word to draw! You've one minute to craft your materpiece. Make sure your audio's on, an alarm will sound when time's up. I ain't a baker so there are no cookies. Don't refresh the page or you'll lose *everything*.
 
 Pete's Protip: You can also play charades.
 
