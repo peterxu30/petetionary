@@ -16,7 +16,7 @@ var words = ["T25lIFBpZWNl", "amlnc2F3IHB1enpsZQ==", "ZG9nZQ==", "YWdpbGU=", "Sm
 var usedWords = [];
 function newWord() {
     var previousWord = document.getElementById("word").innerHTML;
-    if previousWord !== "" {
+    if (previousWord !== "") {
         usedWords.push(previousWord);
         document.getElementById("usedwords").innerHTML = usedWords.join("<br />");
     }
