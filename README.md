@@ -20,8 +20,11 @@ var usedWords = [];
 var i = 0;
 var done = false;
 function newWord() {
-    if (i < msg.length) {
+    if (i <= msg.length) {
         storePreviousWord();
+    }
+    
+    if (i < msg.length) {
         if (!setNewWord()) {
             setMsg()
         }
