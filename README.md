@@ -18,13 +18,14 @@ var msg = ["VGltZQ==", "ZmxpZXM=", "d2hlbg==", "SQ==", "c3BlbmQ=", "aXQ=", "d2l0
 
 var usedWords = [];
 var i = 0;
-var done = false;
 function newWord() {
-    if (i <= msg.length) {
+    if (i == msg.length) {
         storePreviousWord();
+        i++;
     }
-    
+
     if (i < msg.length) {
+        storePreviousWord();
         if (!setNewWord()) {
             setMsg()
         }
