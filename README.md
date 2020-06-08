@@ -1,7 +1,7 @@
 ## Welcome to Petetionary
 Hit New Word below to generate a new word to draw! Don't refresh the page because while I'm crazy, I'm not crazy enough to add cookies.
 
-<h2 id="timer"> 0 : 0 </h2>
+<h2 id="timer">Time:  0 : 0 </h2>
 
 ## Your Word:
 <div id="word"></div>
@@ -82,7 +82,7 @@ function setTimer() {
         var seconds = Math.floor((duration % (1000 * 60)) / 1000);
             
         // Output the result in an element with id="demo"
-        document.getElementById("timer").innerHTML = minutes + " : " + seconds;
+        document.getElementById("timer").innerHTML = "Time: " +  minutes + " : " + seconds;
             
         // If the count down is over, write some text 
         if (duration < 0) {
