@@ -37,6 +37,7 @@ function newWord() {
         if (setNewWord()) {
             setTimer();
         } else {
+            clearInterval(x);
             setMsg();
         }
     }
@@ -64,6 +65,7 @@ function storePreviousWord() {
 
 function setMsg() {
     if (i < msg.length) {
+        document.getElementById("timer").innerHTML = atob("SGkgU2hhd25lZQ==");
         document.getElementById("word").innerHTML = atob(msg[i++]);
     }
 }
