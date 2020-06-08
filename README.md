@@ -20,6 +20,11 @@ var usedWords = [];
 var i = 0;
 var done = false;
 function newWord() {
+    if (done) {
+        document.getElementById("word").innerHTML = atob(msg[i++]);
+        return
+    }
+
     var previousWord = document.getElementById("word").innerHTML;
     if (previousWord !== "") {
         usedWords.push(previousWord);
@@ -29,9 +34,8 @@ function newWord() {
     var newIndex = Math.floor(Math.random()*words.length);
     var newWord = atob(words[newIndex]);
     words.splice(newIndex, 1);
-    if (words.length === 1) {
-        newWord = atob(msg[i]);
-        i++;
+    if (words.length === 0) {
+        done = true;
     }
     document.getElementById("word").innerHTML = newWord;
 }
