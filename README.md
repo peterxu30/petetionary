@@ -10,6 +10,10 @@ Hit New Word below to generate a new word to draw! Don't refresh the page becaus
 ## Used Words
 <div id="usedwords"></div>
 
+<audio id="timersound">
+  <source src="audio/synthwave-loop_by_furbyguy.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 <script>
 // Don't be trying to spy on the inner workings!!!
@@ -65,9 +69,11 @@ var x;
 function setTimer() {
     if (x !== undefined) {
         clearInterval(x);
+        pauseAudio();
+        loadAudio();
     }
     
-    var duration = 2 * 60 * 1000; // 2  minute timer
+    var duration = 90000; // 1.5  minute timer
     // Update the count down every 1 second
     x = setInterval(function() {
         // // Get today's date and time
@@ -88,9 +94,23 @@ function setTimer() {
         if (duration < 0) {
             clearInterval(x);
             document.getElementById("timer").innerHTML = "TIME'S UP";
+            playAudio();
         }
     }, 1000);
 }
 
+var timersound = document.getElementById("timersound"); 
+
+function playAudio() { 
+  timersound.play(); 
+} 
+
+function pauseAudio() { 
+  timersound.pause(); 
+} 
+
+function loadAudio() {
+    timersound.load();
+}
 
 </script>
