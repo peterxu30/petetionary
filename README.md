@@ -22,7 +22,7 @@ var done = false;
 function newWord() {
     var previousWord = document.getElementById("word").innerHTML;
     if (previousWord !== "") {
-        if (i == msg.length) {
+        if (i > msg.length) {
             return
         }
         usedWords.push(previousWord);
