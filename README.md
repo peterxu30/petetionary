@@ -11,7 +11,7 @@ Hit New Word below to generate a new word to draw! Don't refresh the page becaus
 <div id="usedwords"></div>
 
 <audio id="timersound">
-  <source src="audio/synthwave-loop_by_furbyguy.mp3" type="audio/mpeg">
+  <source src="/assets/audio/synthwave-loop_by_furbyguy.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
