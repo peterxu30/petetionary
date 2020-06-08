@@ -20,28 +20,60 @@ var usedWords = [];
 var i = 0;
 var done = false;
 function newWord() {
-    if (i > msg.length) {
-        return
+    if (i < msg.length) {
+        storePreviousWord();
+        if (!setNewWord()) {
+            setMsg()
+        }
     }
 
-    var previousWord = document.getElementById("word").innerHTML;
-    if (previousWord !== "") {
+    // var previousWord = document.getElementById("word").innerHTML;
+    // if (previousWord !== "") {
+    //     usedWords.push(previousWord);
+    //     document.getElementById("usedwords").innerHTML = usedWords.join("<br />");
+    // }
 
-        usedWords.push(previousWord);
-        document.getElementById("usedwords").innerHTML = usedWords.join("<br />");
-    }
-
-    if (done) {
-        document.getElementById("word").innerHTML = atob(msg[i++]);
-        return
-    }
+    // if (done) {
+    //     if (i >= msg.length) {
+    //         return
+    //     }
+    //     document.getElementById("word").innerHTML = atob(msg[i++]);
+    //     return
+    // }
     
+    // var newIndex = Math.floor(Math.random()*words.length);
+    // var newWord = atob(words[newIndex]);
+    // words.splice(newIndex, 1);
+    // if (words.length === 0) {
+    //     done = true;
+    // }
+    // document.getElementById("word").innerHTML = newWord;    
+}
+
+func setNewWord() {
+    if (words.length == 0) {
+        return false;
+    }
+
     var newIndex = Math.floor(Math.random()*words.length);
     var newWord = atob(words[newIndex]);
     words.splice(newIndex, 1);
-    if (words.length === 0) {
-        done = true;
-    }
     document.getElementById("word").innerHTML = newWord;
+    return true;
 }
+
+func storePreviousWord() {
+    var previousWord = document.getElementById("word").innerHTML;
+    if (previousWord !== "") {
+        usedWords.push(previousWord);
+        document.getElementById("usedwords").innerHTML = usedWords.join("<br />");
+    }
+}
+
+func setMsg() {
+    if (i < msg.length) {
+        document.getElementById("word").innerHTML = atob(msg[i++]);
+    }
+}
+
 </script>
