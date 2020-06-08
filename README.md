@@ -2,7 +2,7 @@
 Hit New Word below to generate a new word to draw! Don't refresh the page because while I'm crazy, I'm not crazy enough to add cookies.
 
 ## Timer
-<div id="timer"></div>
+<div id="timer">"0m 0s"</div>
 
 ## Your Word:
 <div id="word"></div>
@@ -13,7 +13,6 @@ Hit New Word below to generate a new word to draw! Don't refresh the page becaus
 
 
 <script>
-var started = false;
 // Don't be trying to spy on the inner workings!!!
 // But if you're reading this, mash that button till the end.
 var words = ["T25lIFBpZWNl", "amlnc2F3IHB1enpsZQ==", "SmlyYQ==", "YmVuZGluZw==", "QWFuZw==", "S2F0YXJh", "WnVrbw==", "bXkgY2FiYmFnZXM=", "U2FuIEZyYW5jaXNjbw==", "dGVjaCBicm8=", "ZGlzcnVwdA==", "c3RhcnR1cA==", "Z2VudHJpZmljYXRpb24=", "Ym9iYQ==", "TWlzc291cmk=", "U3QuIExvdWlz", "Q2FsaWZvcm5pYQ==", "Q2h5bmE=", "Zm9vZGll", "aW5mbHVlbmNlcg==", "VWJlcg==", "U3F1YXJl", "U2FsZXNmb3JjZSBUb3dlcg==", "aGlwc3Rlcg==", "RG9uYWxkIFRydW1w", "QkFSVA==", "TmFwYQ==", "Q2Fyb2xlIEJhc2tpbg==", "Sm9lIEV4b3RpYw==", "dGhlIFp1Y2M=", "UGF0YWd1Y2Np", "c2hlbHRlci1pbi1wbGFjZQ==", "Wm9vbQ==", "TmFydXRv", "dG9pbGV0IHBhcGVy", "aGFuZCBzYW5pdGl6ZXI=", "U29iZXk=", "Y2hpbGRyZW4ncyBjYXJkIGdhbWU=", "cXVhcnRlci1saWZlIGNyaXNpcw==", "Y29udmVydGVkIGxpdmluZyByb29t"];
@@ -23,8 +22,7 @@ var msg = ["VGltZQ==", "ZmxpZXM=", "d2hlbg==", "SQ==", "c3BlbmQ=", "aXQ=", "d2l0
 var usedWords = [];
 var i = 0;
 function newWord() {
-    started = true;
-
+    setTimer()
     if (i == msg.length) {
         storePreviousWord();
         i++;
@@ -68,10 +66,6 @@ function setTimer() {
     countDownDate = Date().getTime() + (2 * 60 * 1000); // 2  minute timer
     // Update the count down every 1 second
     var x = setInterval(function() {
-        if (!started) {
-            document.getElementById("timer").innerHTML = "0m 0s";
-        }
-
         // Get today's date and time
         var now = new Date().getTime();
             
