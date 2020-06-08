@@ -20,15 +20,15 @@ var usedWords = [];
 var i = 0;
 var done = false;
 function newWord() {
-    if (done) {
-        document.getElementById("word").innerHTML = atob(msg[i++]);
-        return
-    }
-
     var previousWord = document.getElementById("word").innerHTML;
     if (previousWord !== "") {
         usedWords.push(previousWord);
         document.getElementById("usedwords").innerHTML = usedWords.join("<br />");
+    }
+
+    if (done) {
+        document.getElementById("word").innerHTML = atob(msg[i++]);
+        return
     }
     
     var newIndex = Math.floor(Math.random()*words.length);
