@@ -2,7 +2,7 @@
 Hit New Word below to generate a new word to draw! Don't refresh the page because while I'm crazy, I'm not crazy enough to add cookies.
 
 ## Timer
-<div id="timer">"0m 0s"</div>
+<h3 id="timer">0m 0s</h3>
 
 ## Your Word:
 <div id="word"></div>
@@ -62,10 +62,16 @@ function setMsg() {
     }
 }
 
+var x;
 function setTimer() {
-    countDownDate = Date().getTime() + (2 * 60 * 1000); // 2  minute timer
+    if (x !== undefined) {
+        clearInterval(x);
+    }
+    
+    var d = new Date();
+    var countDownDate = d.getTime() + (2 * 60 * 1000); // 2  minute timer
     // Update the count down every 1 second
-    var x = setInterval(function() {
+    x = setInterval(function() {
         // Get today's date and time
         var now = new Date().getTime();
             
