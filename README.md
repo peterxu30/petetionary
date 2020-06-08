@@ -26,8 +26,4 @@ function newWord() {
     words.splice(newIndex, 1);
     document.getElementById("word").innerHTML = newWord;
 }
-
-function bin2String(array) {
-  return String.fromCharCode.apply(String, array);
-}
 </script>
