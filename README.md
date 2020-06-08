@@ -50,7 +50,7 @@ function newWord() {
     // document.getElementById("word").innerHTML = newWord;    
 }
 
-func setNewWord() {
+function setNewWord() {
     if (words.length == 0) {
         return false;
     }
@@ -62,7 +62,7 @@ func setNewWord() {
     return true;
 }
 
-func storePreviousWord() {
+function storePreviousWord() {
     var previousWord = document.getElementById("word").innerHTML;
     if (previousWord !== "") {
         usedWords.push(previousWord);
@@ -70,7 +70,7 @@ func storePreviousWord() {
     }
 }
 
-func setMsg() {
+function setMsg() {
     if (i < msg.length) {
         document.getElementById("word").innerHTML = atob(msg[i++]);
     }
