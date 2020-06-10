@@ -13,7 +13,7 @@ Pete's Protip: You can also play charades.
 <div id="usedwords"></div>
 
 <audio id="timersound">
-  <source src="/petetionary/assets/audio/synthwave-loop_by_furbyguy.mp3" type="audio/mpeg">
+  <source src="/petetionary/assets/audio/astronomia_retro.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
