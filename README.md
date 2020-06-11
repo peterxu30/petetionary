@@ -78,14 +78,9 @@ function setTimer() {
         loadAudio();
     }
     
-    var duration = 60000; // 1.5  minute timer
+    var duration = 60000;
     // Update the count down every 1 second
     x = setInterval(function() {
-        // // Get today's date and time
-        // var now = new Date().getTime();
-            
-        // // Find the distance between now and the count down date
-        // var distance = countDownDate - now;
         duration = duration - 1000;
             
         // Time calculations for days, hours, minutes and seconds
